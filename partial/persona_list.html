@@ -1,0 +1,17 @@
+
+  Filter: <input type="text" ng-model="query" placeholder="Enter you name">
+  Sort by:
+  <select ng-model="orderProp">
+    <option value="name">Alphabetically</option>
+    <option value="level">Level</option>
+    <option value="arcana">Arcana</option>
+  </select>
+  <hr>
+  <ul>
+    <li ng-repeat="persona in personas | filter:query | orderBy:orderProp">
+    [{{persona.arcana}}] {{persona.name}} ({{persona.level}})
+    </li>
+  </ul>
+
+
+

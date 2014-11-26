@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="persona4App">
+<head>
+  <meta charset="utf-8">
+  <title>Persona 4 Mixer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+  <script src="controller.js"></script>
+</head>
+<body ng-controller="testController">
+
+<div ng-switch="cur_window">
+  <div ng-switch-when="list">
+    <div ng-include="'./partial/persona_list.html'"></div>
+  </div>
+
+
+  <div ng-switch-when="result">
+    <div ng-include="'./partial/results.html'"></div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

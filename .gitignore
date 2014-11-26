@@ -1,0 +1,10 @@
+
+*.swp
+personas.html
+.DS_Store
+Session.vim
+angular-phonecat/*
+
+
+
+
