@@ -1,4 +1,6 @@
 
+<div>
+
   Filter: <input type="text" ng-model="query" placeholder="Enter you name">
   Sort by:
   <select ng-model="orderProp">
@@ -8,10 +10,10 @@
   </select>
   <hr>
   <ul>
-    <li ng-repeat="persona in personas | filter:query | orderBy:orderProp">
+    <li ng-repeat="persona in personas | filter:query | orderBy:[orderProp, orderProp == 'arcana' ? 'level' : 'name']">
     [{{persona.arcana}}] {{persona.name}} ({{persona.level}})
     </li>
   </ul>
 
-
+</div>
 
